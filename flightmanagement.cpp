@@ -19,7 +19,7 @@ public:
         reserved = 0;
     }
 
-    // Public getters to allow ReservationSystem to read data safely
+    
     string getFlightNo() const { return flightNo; }
     string getDeparture() const { return departure; }
     string getDestination() const { return destination; }
@@ -96,10 +96,10 @@ int main() {
 
         cin >> choice;
 
-        // Check if the user entered something that isn't an integer
+        
         if (cin.fail()) {
-            cin.clear(); // Clear the error flag
-            cin.ignore(1000, '\n'); // Discard the bad input buffer
+            cin.clear(); 
+            cin.ignore(1000, '\n'); 
             cout << "Invalid Choice! Please enter a number." << endl << endl;
             continue;
         }
@@ -108,7 +108,7 @@ int main() {
             #ifdef _WIN32
                 system("cls"); 
             #else
-                system("clear"); // Works seamlessly on Mac/Linux too!
+                system("clear"); 
             #endif
             rs.reserveSeat();
             cout << endl;
